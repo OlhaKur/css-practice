@@ -1,7 +1,122 @@
+/* :root {
+  background: plum;
+}
+
 html {
   max-width: 720px;
+
+  background: blue;
 }
 
 body {
   background: #fff;
+}
+
+* {
+  color: cornflowerblue;
+}
+
+h1 {
+  color: forestgreen;
+}
+
+h2 {
+  color: lightseagreen;
+}
+
+.box {
+  background: rgb(241, 225, 241);
+}
+
+.btn {
+  color: violet;
+}
+
+#user {
+  color: rgb(168, 194, 243);
+}
+
+h1,
+h2#user,
+button {
+  color: rgb(35, 129, 160);
+}
+
+div > p {
+  color: darkblue;
+}
+
+section em {
+  color: black;
+}
+
+section .child {
+  color: rgb(51, 51, 116);
+} */
+
+.card {
+  background: #ebe2e2;
+}
+
+.item {
+  color: blueviolet;
+}
+html {
+  max-width: 960px;
+}
+
+li:first-child {
+  color: red;
+}
+
+.item:last-child {
+  color: darkorange;
+}
+
+p:first-of-type {
+  color: rgb(12, 116, 97);
+}
+
+p:last-of-type {
+  color: brown;
+}
+.input-dark {
+  background: #eeeeaa;
+}
+.input-dark[required] {
+  background: #b4ef92;
+}
+.input-dark[type='number'] {
+  background: aqua;
+}
+
+.small-img[alt~='small'] {
+  height: 500px;
+}
+button[class|='btn'] {
+  background: #9fe776;
+}
+
+a[class^='btn'] {
+  background: #76abe7;
+}
+a[class*='btn'] {
+  background: #0a65cd;
+}
+
+.btn::first-letter {
+  color: #cd0a2b;
+}
+
+.big-text::first-line {
+  color: #0a65cd;
+}
+
+.input-dark::placeholder {
+  background: #f5f541;
+}
+
+.big-text::before {
+  content: '$$$';
+  color: #089a39;
 }
