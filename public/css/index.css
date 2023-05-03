@@ -1,122 +1,53 @@
-/* :root {
-  background: plum;
-}
-
-html {
-  max-width: 720px;
-
-  background: blue;
-}
-
-body {
-  background: #fff;
-}
-
-* {
-  color: cornflowerblue;
-}
-
-h1 {
-  color: forestgreen;
-}
-
-h2 {
-  color: lightseagreen;
-}
-
-.box {
-  background: rgb(241, 225, 241);
-}
-
-.btn {
-  color: violet;
-}
-
-#user {
-  color: rgb(168, 194, 243);
-}
-
-h1,
-h2#user,
-button {
-  color: rgb(35, 129, 160);
-}
-
-div > p {
-  color: darkblue;
-}
-
-section em {
-  color: black;
-}
-
-section .child {
-  color: rgb(51, 51, 116);
-} */
-
-.card {
-  background: #ebe2e2;
-}
-
-.item {
-  color: blueviolet;
-}
 html {
   max-width: 960px;
 }
 
-li:first-child {
-  color: red;
+.card {
+  background-color: rgb(186, 252, 252);
+}
+.card > p {
+  color: green;
+  -webkit-text-fill-color: rgb(43, 226, 214);
+  -webkit-text-stroke: 1px rgb(0, 17, 255);
 }
 
-.item:last-child {
-  color: darkorange;
+h1 {
+  writing-mode: vertical-lr;
+  color: rgb(14, 158, 171);
 }
+#test2:hover {
+  -webkit-text-fill-color: rgb(43, 226, 208);
+  -webkit-text-stroke: 1px rgb(134, 62, 125);
+  direction: rtl;
+  text-transform: uppercase;
+}
+#test {
+  color: inherit;
+  -webkit-text-fill-color: inherit;
+  -webkit-text-stroke: inherit;
+  text-align: left justify;
 
-p:first-of-type {
-  color: rgb(12, 116, 97);
+  text-decoration: underline wavy rgb(7, 104, 83);
 }
-
-p:last-of-type {
-  color: brown;
+#test3:hover {
+  color: rgb(8, 46, 150);
+  letter-spacing: 5px;
 }
-.input-dark {
-  background: #eeeeaa;
+pre {
+  tab-size: 1;
+  text-decoration: underline solid red;
 }
-.input-dark[required] {
-  background: #b4ef92;
+#test2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: small;
 }
-.input-dark[type='number'] {
-  background: aqua;
+span {
+  font-size: larger;
+  font-weight: lighter;
+  font-style: oblique;
 }
-
-.small-img[alt~='small'] {
-  height: 500px;
-}
-button[class|='btn'] {
-  background: #9fe776;
-}
-
-a[class^='btn'] {
-  background: #76abe7;
-}
-a[class*='btn'] {
-  background: #0a65cd;
-}
-
-.btn::first-letter {
-  color: #cd0a2b;
-}
-
-.big-text::first-line {
-  color: #0a65cd;
-}
-
-.input-dark::placeholder {
-  background: #f5f541;
-}
-
-.big-text::before {
-  content: '$$$';
-  color: #089a39;
+.test4 {
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
 }
