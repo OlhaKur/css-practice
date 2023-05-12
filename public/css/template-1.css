@@ -1,5 +1,5 @@
 .page {
-  background: #ffffff;
+  background: transparent;
   padding: 0 15px;
 }
 
@@ -30,7 +30,7 @@
 
 .nav_link:hover {
   text-decoration: underline;
-  color: blue;
+  color: rgb(9, 95, 232);
 }
 
 .nav_vertical > .nav_link {
@@ -137,7 +137,7 @@
   box-shadow: 0px 0px 5px 2px #6badef63;
 }
 .card:hover {
-  outline: 2px solid rgb(0, 76, 255);
+  outline: 2px solid rgb(34, 61, 125);
   outline-offset: 5px;
 }
 
@@ -157,8 +157,36 @@ h1 {
 
 p {
   background: #b6d4ee;
-  width: 200px;
-  height: 200px;
-  overflow: overlay;
+  width: 800px;
+  height: 500px;
+  overflow: auto;
   text-overflow: ellipsis;
+}
+
+/* body {
+  background-image: url('/img/test2.png');
+  background-repeat: space;
+ 
+} */
+
+/* .page {
+  background-color: transparent;
+  background-image: url('/img/test6.jpeg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 800px 1200px cover;
+} */
+
+.hero_text {
+  background-color: #7fa3c6bc;
+  background-size: 600px 1000px;
+}
+
+.hero_text:hover {
+  border-image-source: url('/img/test3.png');
+  border-image-width: 10%;
+  border-image-slice: 10%;
+  padding: 40px;
+  color: white;
+  border-image-repeat: round;
 }
