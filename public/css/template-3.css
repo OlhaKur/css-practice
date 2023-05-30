@@ -1,3 +1,19 @@
+@import '/css/var.css';
+
+@font-face {
+  font-family: 'Segment';
+  src: url('/font/Segment-Regular.otf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Segment';
+  src: url('/font/Segment-SemiBold.otf');
+  font-weight: 600;
+}
+
+@layer normalize, main, component, style;
+
 @keyframes fly {
   from {
     top: 0;
@@ -20,25 +36,6 @@
     left: 0;
     background-color: #212529;
   }
-}
-
-:root {
-  --space-m: 12px;
-  --space-xm: 16px;
-  --space-l: 24px;
-  --space-b: 36px;
-  --size-s: 14px;
-  --size-d: 16px;
-  --size-l: 20px;
-  --color-border: #dee2e6;
-  --color-primary: rgb(39, 96, 252);
-  --color-white: #fff;
-  --color-title: #212529;
-  --border-radius: 12px;
-  --color-text: #343a40;
-  --weight-title: 500;
-  --weight-text: 400;
-  --page-width: 960px;
 }
 
 /* =================================== */
@@ -203,25 +200,28 @@
   color: var(--color-text);
 }
 
-.button {
-  display: inline-block;
-  padding: var(--space-m) var(--space-xm);
-  text-decoration: none;
-  font-size: var(--size-d);
-  border-radius: calc(var(--border-radius) / 3);
-  transition-property: opacity background-color color;
-  transition-duration: 1s;
+@layer main {
+  .button {
+    display: inline-block;
+    padding: var(--space-m) var(--space-xm);
+    text-decoration: none;
+    font-size: var(--size-d);
+    border-radius: calc(var(--border-radius) / 3);
+    transition-property: opacity background-color color;
+    transition-duration: 1s;
+  }
+  .button:hover {
+    opacity: 0.7;
+    background-color: rgb(186, 186, 29);
+    color: var(--color-title);
+  }
 }
 
-.card_button {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-}
-
-.button:hover {
-  opacity: 0.7;
-  background-color: rgb(186, 186, 29);
-  color: var(--color-title);
+@layer component {
+  .card_button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
 }
 
 .form {
@@ -349,4 +349,93 @@ body:hover .modal {
 
 :root {
   scroll-behavior: smooth;
+}
+
+.blog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media all and (width <= 600px) {
+  .blog {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (601px < width <= 800px) {
+  .blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* @media all and (min-height: 400px) {
+  .page_content {
+    background-color: red;
+  }
+} */
+
+.form {
+  gap: var(--space-d);
+}
+
+@media all and (width <= 560px) {
+  .form {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .form_content {
+    align-items: center;
+  }
+  .form_info {
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    line-height: 150%;
+  }
+  .form_button {
+    margin-top: var(--space-l);
+  }
+}
+
+.hero_container {
+  container-type: inline-size;
+  container-name: hero;
+  min-height: max-content;
+}
+
+@container hero (width < 960px) {
+  .hero {
+    flex-direction: column;
+  }
+}
+
+@layer style {
+  .card_button {
+    background-color: red;
+  }
+}
+
+/* .ex {
+  font-size: 1ex;
+} */
+.ex {
+  display: inline-block;
+  margin-left: 2ex;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+/* .test {
+  position: absolute;
+  background-color: red;
+  top: 0;
+  left: 0;
+  height: 100vmin;
+  width: 100vmin;
+  z-index: 9;
+} */
+
+.hero_title {
+  font-size: 6cqw;
 }
